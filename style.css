@@ -7,23 +7,23 @@
 @font-face {
   font-family: 'Freehand';
   src: url('./assets/fonts/Freehand-Regular.ttf') format('truetype');
-  font-weight: normal;
   font-style: normal;
+  font-weight: bold;
 }
 
 body {
-  font-family: 'Freehand', sans-serif;
   background-image: url('./assets/images/wallpaper-bw.jpg'); /* Reemplaza 'ruta-de-tu-imagen.jpg' con la ruta de tu imagen */
   background-size: cover; /* Para que la imagen cubra todo el fondo */
   background-position: center; /* Para centrar la imagen en el fondo */
   background-repeat: no-repeat; /* Para que la imagen no se repita */
   height: 100vh; /* Establece la altura del body al 100% de la ventana gráfica */
   margin: 0; /* Elimina el margen por defecto del body */
+  
 }
 
 .btn-1{
-  width: 300px;
-  height: 200px;
+  width: 25vw;
+  height: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -79,18 +79,24 @@ span {
   z-index: 3;
 }
 
+#btn-yes {
+  position: absolute;
+  margin-right: 150px;
+}
+
 #btn-no {
   position: absolute;
+  margin-left: 150px;
   transition: left 0.2s ease-in-out, top 0.5s ease-in-out;
 }
 
 #btn-no:hover {
-  /* Estilo adicional al hacer hover si es necesario */
   cursor: pointer;
 }
 
 .title-custom {
   background-color: var(--color-btn);
+  font-family: 'Freehand', sans-serif;
 }
 
 .buttons-container {
@@ -102,10 +108,11 @@ span {
   margin-left: 20px;
 }
 
-.btn-1 {
-  margin-right: 10px; /* Ajusta el margen derecho según tus necesidades */
-}
 
 .gif-container-custom {
   height: 40vh;
+}
+
+.inactive {
+  display: none;
 }

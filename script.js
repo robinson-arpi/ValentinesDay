@@ -1,9 +1,17 @@
 var audio = document.getElementById('audio');
 var count = 0;
 audio.play();
+
 function nextPage() {
   var imagen = document.getElementById('gif-img');
+  var messageContainer = document.getElementById("messageContainer");
+  var buttonsContainer = document.getElementById("buttonsContainer");
+
   imagen.src = './assets/images/gif5.gif'; 
+
+  messageContainer.classList.remove("inactive");
+  buttonsContainer.classList.add("inactive");
+
 }
 
 function moveButton() {
