@@ -1,6 +1,11 @@
-var audio = document.getElementById('audio');
+
 var count = 0;
-audio.play();
+
+document.addEventListener('DOMContentLoaded', function() {
+  var audio = document.getElementById('audio');
+  audio.play();
+  count = 0;
+});
 
 function nextPage() {
   var imagen = document.getElementById('gif-img');
