@@ -3,8 +3,17 @@ var count = 0;
 
 document.addEventListener('DOMContentLoaded', function() {
   var audio = document.getElementById('audio');
-  audio.play();
-  count = 0;
+
+  // Espera a que el usuario interactúe y luego reproduce el audio
+  document.addEventListener('click', function() {
+    audio.play()
+      .then(function() {
+        console.log('Audio reproduciéndose con éxito.');
+      })
+      .catch(function(error) {
+        console.error('Error al reproducir el audio:', error);
+      });
+  });
 });
 
 function nextPage() {
