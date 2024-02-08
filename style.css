@@ -1,0 +1,111 @@
+:root {
+  --color-btn: #4534db50; /* Asigna el valor que desees a la variable --color */
+  /*--color-btn: #dba13450; /* Asigna el valor que desees a la variable --color */
+}
+
+
+@font-face {
+  font-family: 'Freehand';
+  src: url('./assets/fonts/Freehand-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Freehand', sans-serif;
+  background-image: url('./assets/images/wallpaper-bw.jpg'); /* Reemplaza 'ruta-de-tu-imagen.jpg' con la ruta de tu imagen */
+  background-size: cover; /* Para que la imagen cubra todo el fondo */
+  background-position: center; /* Para centrar la imagen en el fondo */
+  background-repeat: no-repeat; /* Para que la imagen no se repita */
+  height: 100vh; /* Establece la altura del body al 100% de la ventana gráfica */
+  margin: 0; /* Elimina el margen por defecto del body */
+}
+
+.btn-1{
+  width: 300px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.btn-1 a {
+  text-decoration: none;
+  border: 2px solid #010100;
+  padding: 15px;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+}
+
+.btn-1 a::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -2px;
+  width: calc(100% + 6px);
+  height: calc(100% - 10px);
+  background-color: var(--color-btn);
+  transition: all 0.5s ease-in-out;
+  transform: scaleY(1);
+}
+
+.btn-1 a:hover::before {
+  transform: scaleY(0);
+}
+
+.btn-1 a::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: -5px;
+  width: calc(100% - 10px);
+  /*100% plus double the times left values*/
+  height: calc(100% + 10px);
+  background-color: var(--color-btn);
+  transition: all 0.5s ease-in-out;
+  transform: scaleX(1);
+}
+
+.btn-1 a:hover::after {
+  transform: scaleX(0);
+}
+
+span {
+  position: relative;
+  z-index: 3;
+}
+
+#btn-no {
+  position: absolute;
+  transition: left 0.2s ease-in-out, top 0.5s ease-in-out;
+}
+
+#btn-no:hover {
+  /* Estilo adicional al hacer hover si es necesario */
+  cursor: pointer;
+}
+
+.title-custom {
+  background-color: var(--color-btn);
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+  margin-left: 20px;
+}
+
+.btn-1 {
+  margin-right: 10px; /* Ajusta el margen derecho según tus necesidades */
+}
+
+.gif-container-custom {
+  height: 40vh;
+}
