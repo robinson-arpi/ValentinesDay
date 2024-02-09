@@ -3,8 +3,7 @@ var count = 0;
 
 document.addEventListener('DOMContentLoaded', function() {
   var audio = document.getElementById('audio');
-
-  // Espera a que el usuario interactúe y luego reproduce el audio
+  
   document.addEventListener('click', function() {
     audio.play()
       .then(function() {
@@ -60,4 +59,14 @@ function moveButton() {
 
   button.style.left = `${x}px`;
   button.style.top = `${y}px`;
+
+  // Asegurar que el botón no se desplace fuera del límite izquierdo
+  if (x < 0) {
+    button.style.left = '0px';
+  }
+  
+  // Asegurar que el botón no se desplace fuera del límite superior
+  if (y < 0) {
+    button.style.top = '0px';
+  }
 }
